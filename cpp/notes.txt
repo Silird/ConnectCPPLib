@@ -1,0 +1,8 @@
+В папке с HelloWorldJNI.java ввести команду для генерации *.h
+javac -h . HelloWorldJNI.java
+
+Компиляция
+g++ -c -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.cpp -o ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.o
+
+link
+g++ -shared -fPIC -o libHello.so ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.o -lc
