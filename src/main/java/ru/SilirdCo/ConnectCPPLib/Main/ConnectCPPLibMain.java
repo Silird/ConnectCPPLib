@@ -10,7 +10,7 @@ public class ConnectCPPLibMain {
 
     public static void main(String[] args) {
 //        System.loadLibrary("Hello");
-        new HelloWorldJNI().sayHello();
+//        new HelloWorldJNI().sayHello();
         DynlibJNI dynlibJNI = new DynlibJNI();
         double d = 100;
         System.out.println("sqrt: " + dynlibJNI.getSqrt(d));

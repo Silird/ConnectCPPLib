@@ -2,17 +2,29 @@
 javac -h . HelloWorldJNI.java
 
 Компиляция
-g++ -c -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.cpp -o ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.o
+g++ -c -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux название_написанного.cpp -o название_написанного.o
+g++ -c -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" название_написанного.cpp -o название_написанного.o
 
 link
-g++ -shared -fPIC -o libHello.so ru_SilirdCo_ConnectCPPLib_jni_HelloWorldJNI.o -lc
+g++ -shared -fPIC -o libHello.so название_написанного.o -lc
+g++ -shared -o hello.dll название_написанного.o -Wl,--add-stdcall-alias
 
 
 Компиляция динамической либы с++
+linux:
+g++ -c dynamic.cpp
+windows:
 g++ -c dynamic.cpp
 
 link
+linux:
 g++ -shared -fPIC -o dynamic.so dynamic.o
+windows:
+g++ -shared -o dynamic.dll dynamic.o
 
 Связка программы или библиотеки с библиотекой
+linux:
 g++ main.o ./dynamic.so
+g++ main.o .libs/dynamic.so (чтобы библа должна лежать в папке libs относительно исполняемого файла)
+windows:
+g++ main.o dynamic.dll
