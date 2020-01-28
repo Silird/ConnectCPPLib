@@ -36,4 +36,7 @@
 # Logs
 /Logs
 
+# c++ object files
+*.o
+
 # other

@@ -1,5 +1,13 @@
+Проект создан как тестовый пример по связке java и C++ с помощью jni.
+Также была использована написанная на с++ библиотека .so или .dll с последующей интеграцией её функций в java.
+
+На линуксе использовался стандартный пакет g++, истанавливаемый через get install и по подсказке, если он не установлен и запустить g++
+На виндоус был установлен minGW с https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
+
 В папке с HelloWorldJNI.java ввести команду для генерации *.h
 javac -h . HelloWorldJNI.java
+
+После чего надо создать .cpp файл с реализацией методов указанных в сгенерированном .h, скопировав сигнатуры функций полностью.
 
 Компиляция
 g++ -c -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux название_написанного.cpp -o название_написанного.o
