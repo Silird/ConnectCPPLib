@@ -3,7 +3,9 @@
 
 На линуксе использовался стандартный пакет g++, истанавливаемый через get install и по подсказке, если он не установлен и запустить g++.<br>
 На виндоус был установлен minGW с https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
+
 ---
+
 В папке с HelloWorldJNI.java ввести команду для генерации *.h
 > javac -h . HelloWorldJNI.java
 
