@@ -1,10 +1,10 @@
-package ru.silirdco.TemplateProject.Util.Logs;
+package ru.silirdco.connectcpplib.util.logs;
 
 import ch.qos.logback.core.FileAppender;
 import ch.qos.logback.core.recovery.ResilientFileOutputStream;
 import ch.qos.logback.core.util.FileUtil;
 import org.apache.commons.lang3.SystemUtils;
-import ru.silirdco.TemplateProject.Util.Structure;
+import ru.silirdco.connectcpplib.util.Structure;
 
 import java.io.File;
 import java.io.IOException;

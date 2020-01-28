@@ -8,7 +8,7 @@
     </appender>
 
     <!-- Send debug messages to a file at "Logs\logIQShop.log" -->
-    <appender name="fileAppender" class="ru.silirdco.TemplateProject.Util.Logs.DateFileAppender">                                                                                                                                                                                                     <!--pidrila-->
+    <appender name="fileAppender" class="ru.silirdco.connectcpplib.util.logs.DateFileAppender">                                                                                                                                                                                                     <!--pidrila-->
         <file>Logs\logTemplateProject.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg %n</Pattern>

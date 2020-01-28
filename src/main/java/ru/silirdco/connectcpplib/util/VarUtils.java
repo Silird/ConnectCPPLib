@@ -1,4 +1,4 @@
-package ru.silirdco.TemplateProject.Util;
+package ru.silirdco.connectcpplib.util;
 
 @SuppressWarnings("unused")
 public class VarUtils {
