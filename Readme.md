@@ -18,6 +18,21 @@
 то требуется полностью перегенерить .h файл и изменить сигнатуру функции в .cpp файле, 
 после чего провести полный алгоритм создания библиотеки.
 
+Чтобы указать java откуда брать библиотеки можно указать в параметрах запуска:
+> -Djava.library.path=libs
+
+Для подлючения библиотеки в java требуется ввести следующий код в класс с native методами:
+
+```java
+public class NameJNI {
+    static {
+        System.loadLibrary("nameJNI");
+    }
+
+    // public native ...;
+}
+```
+
 ---
 
 ##### Компиляция
@@ -41,10 +56,10 @@ windows:<br>
 #### Линковка
 
 linux:<br>
-> g++ -shared -fPIC -o libHello.so nameJNI.o -lc [./libdynamic.so]
+> g++ -shared -fPIC -o libnameJNI.so nameJNI.o -lc [./libdynamic.so]
 
 windows:<br>
-> g++ -shared -o hello.dll nameJNI.o -Wl,--add-stdcall-alias [dynamic.dll]
+> g++ -shared -o nameJNI.dll nameJNI.o -Wl,--add-stdcall-alias [dynamic.dll]
 
 ---
 
