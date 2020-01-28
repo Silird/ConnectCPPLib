@@ -21,8 +21,18 @@
 linux:<br>
 > g++ -c -fPIC -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux nameJNI.cpp -o nameJNI.o
 
+`В системе должны быть обязательно прописана переменная JAVA_HOME. 
+Проверить её наличие можно с помощью команды:`<br>
+> echo ${JAVA_HOME}
+
+`Если её нет, тогда требуется отредактировать файл /etc/profile и в его начало вставить следующие строки:`
+> export JAVA_HOME="/usr/lib/jvm/java-X.X.X-openjdk-xxxxx"<br>
+> export PATH=$JAVA_HOME/bin:$PATH
+
 windows:<br>
 > g++ -c -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" nameJNI.cpp -o nameJNI.o
+
+`В системе должна быть прописана системная переменная JAVA_HOME c параметром например "C:\Program Files\Java\jdkX.X.X_XXX"`
 
 #### Линковка
 
