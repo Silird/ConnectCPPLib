@@ -1,4 +1,4 @@
-package ru.SilirdCo.TemplateProject.Util;
+package ru.silirdco.TemplateProject.Util;
 
 import java.text.SimpleDateFormat;
 

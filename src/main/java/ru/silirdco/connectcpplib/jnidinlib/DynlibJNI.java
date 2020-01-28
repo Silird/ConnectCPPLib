@@ -1,4 +1,4 @@
-package ru.SilirdCo.ConnectCPPLib.jniDinlib;
+package ru.silirdco.connectcpplib.jnidinlib;
 
 public class DynlibJNI {
     static {

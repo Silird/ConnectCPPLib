@@ -1,4 +1,4 @@
-package ru.SilirdCo.ConnectCPPLib.jni;
+package ru.silirdco.connectcpplib.jni;
 
 public class HelloWorldJNI {
     static {

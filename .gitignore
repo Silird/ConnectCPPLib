@@ -39,4 +39,7 @@
 # c++ object files
 *.o
 
+# java object files
+*.class
+
 # other
